@@ -16,9 +16,10 @@ public class EntryPointsController implements IDelegate {
 	@Override
 	public String controllerMethod() {				
 		
-		return isDtwProcess() ? "dtw processed ou " + this.standinController.controllerMethod() : this.standinController.controllerMethod();
+		return isDtwProcess() ? "dtw processed" : this.standinController.controllerMethod();
 	}
 	
+	//TODO: Decision on what controller will process the message
 	private boolean isDtwProcess() {
 		return true;
 	}
